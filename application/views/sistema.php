@@ -19,8 +19,10 @@
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-2 col-md-offset-5">
-					<form action="http://ec2-54-207-54-234.sa-east-1.compute.amazonaws.com/projeto-frizzo/site" method="post" accept-charset="utf-8" class="form" name="myform"><input type="text" name="senha" value="" id="senha" maxlength="5" size="3" style="width:10%">	</form>
-					<input class="col-md-2 form-control senha" type="text" placeholder=""></div>
+					<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
+						<input class="col-md-2 form-control senha" type="text" placeholder="">
+					</form>
+				</div>
 				</div>
 				<div class="col-md-offset-5"></div>
 			</div>

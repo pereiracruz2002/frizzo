@@ -16,12 +16,17 @@
       $(document).ready(function(){
         $.ionSound({
               sounds: [
-                  "comecar_jogo",
+                  "bell_ring",
               ],
               path: base_url+"sons/",
               multiPlay: true,
               volume: "1.0"
         });
+
+      $("form").on("submit", function(e){
+        e.preventDefault();
+        $.ionSound.play("bell_ring")
+       });
     });
     </script>
   </body>
