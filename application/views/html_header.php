@@ -7,6 +7,7 @@
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="<?php echo base_url();?>css/style.css" rel="stylesheet" media="screen">
+    <script src="<?php echo base_url();?>js/ion.sound.min.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="/js/html5shiv.js"></script>

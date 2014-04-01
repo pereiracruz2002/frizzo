@@ -13,6 +13,16 @@
         $("[rel='popouver']").popover();
       });
       $('.carousel').carousel()
+      $(document).ready(function(){
+        $.ionSound({
+              sounds: [
+                  "comecar_jogo",
+              ],
+              path: base_url+"sons/",
+              multiPlay: true,
+              volume: "1.0"
+        });
+    });
     </script>
   </body>
 </html>
