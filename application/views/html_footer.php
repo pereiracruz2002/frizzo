@@ -23,16 +23,14 @@
               sounds: [
                   "bell_ring",
               ],
-              path: base_url+"sons/",
+              path: "http://localhost/frizzo/sons/",
               multiPlay: true,
               volume: "1.0"
         });
-
       $("form").on("submit", function(e){
         e.preventDefault();
         senha =  $("input[name=senha]").val();
         total_senhas = $('#senha li').length;
-        $.ionSound.play("bell_ring")
         if(total_senhas == 1){
           $('#senha').empty();
           $('#senha').append( "<li>"+senha+"</li>" );
