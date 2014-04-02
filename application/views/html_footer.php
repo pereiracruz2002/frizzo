@@ -16,7 +16,9 @@
       });
       $('.carousel').carousel()
       $(document).ready(function(){
+
         $("input[name=senha]").focus();
+
         $.ionSound({
               sounds: [
                   "bell_ring",
@@ -43,6 +45,8 @@
         }
         $("input[name=senha]").val("");
         $("input[name=senha]").focus();
+
+        $.ionSound.play("bell_ring")
        });
     });
     </script>
