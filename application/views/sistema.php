@@ -19,7 +19,10 @@
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-2 col-md-offset-5">
-					<input class="col-md-2 form-control senha" type="text" placeholder="Senha"></div>
+					<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
+						<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
+					</form>
+				</div>
 				</div>
 				<div class="col-md-offset-5"></div>
 			</div>
@@ -33,7 +36,9 @@
 				<div class="panel panel-default">
 	  			       <div class="panel-heading turquesa"><h4 class="text-center text_maisculo yellow">Últimas Senhas</h4></div>
 				         <div class="panel-body">
-				    	     <p>Senha anterior</p>
+				    	     <ul class="list-unstyled" id="senha">
+				    	     	<li>*****</li>
+				    	     </ul>
 				         </div>
 	            </div>
 			</div>
