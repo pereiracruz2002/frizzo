@@ -3,7 +3,7 @@
         <p><a href="<?php echo base_url(); ?>admin/listar" class="btn btn-default">Voltar</a></p>
         <main class="well">  
             <article>
-                <form method="post" action="<?php echo base_url(); ?>admin/editar/<?php echo $this->uri->segment(3); ?>" class="form-horizontal">
+                <form method="post" action="<?php echo base_url(); ?>index.php/admin/editar/<?php echo $this->uri->segment(3); ?>" class="form-horizontal">
                     <?php foreach($query->result() as $admin): ?>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Usuario:</label>

@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				 <div class="panel-body">
-					<h1 class="text-center text_maisculo yellow">Peixaria Frizzo</h1>
+					<h1 class="text-center text_maisculo marron">Peixaria Frizzo</h1>
 				</div>
 			</div>
 		</div>
@@ -19,7 +19,7 @@
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-md-3 col-md-offset-4">
-									<p id="senha_atual" class="text-center destaque">*****</p>
+									<p id="senha_atual" class="text-center destaque marron">*****</p>
 									<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
 										<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
 									</form>
@@ -58,9 +58,9 @@
 							</ol>
 						<!-- Carousel items -->
 							<div class="carousel-inner">
-								<div class="active item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/sardinha.jpg" width="430" height="295"></div>
-								<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Pacu.jpg" width="430" height="295"></div>
-								<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Tilapia.jpg" width="430" height="295"></div>
+								<div class="active item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/sardinha.jpg" width="430px" height="295px"></div>
+								<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Pacu.jpg" width="430px" height="295px"></div>
+								<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Tilapia.jpg" width="430px" height="295px"></div>
 							</div>
 							<!-- Carousel navegação -->
 							<a class="left carousel-control" href="#myCarousel" data-slide="prev">

@@ -15,7 +15,7 @@
 
     <article>
 
-        <form method="post" action="<?php echo base_url(); ?>admin/cadastrar" class="form-horizontal" role="form">
+        <form method="post" action="<?php echo base_url(); ?>index.php/admin/cadastrar" class="form-horizontal" role="form">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Usuario:</label>
                 <div class="col-sm-10">

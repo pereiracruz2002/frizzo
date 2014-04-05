@@ -19,7 +19,7 @@
 
         $("input[name=senha]").focus();
         $("input[name=senha]").focus(function() {
-          $(this).css('borderColor','#FFF');
+          $("input[name=senha]").css('borderColor','#FFF');
         });
 
         $.ionSound({
