@@ -59,23 +59,23 @@ class admin extends CI_Controller {
                     $this->load->view('v_cadastrarAdmin', $this->data);
                 } else {
                     $this->data['erro'] = "Administrador com este nome de usuário, já cadastrado!";
-                    $this->load->view('v_cadastrarAdmin', $this->data);
+                    $this->load->view('admin/v_cadastrarAdmin', $this->data);
                 }
             }
             else{
                 $this->data['erro'] = "Você não possui permissões administrativas";
-                $this->load->view('v_cadastrarAdmin', $this->data);
+                $this->load->view('admin/v_cadastrarAdmin', $this->data);
             }
         }
         else{
-            $this->load->view('v_cadastrarAdmin', $this->data);
+            $this->load->view('admin/v_cadastrarAdmin', $this->data);
         }
     }
     
     public function listar(){
         $this->load->model('admin_model');
         $this->data['query'] = $this->admin_model->listar();
-        $this->load->view('v_listarAdministradores', $this->data);
+        $this->load->view('admin/v_listarAdministradores', $this->data);
     }
     
     public function deletar($id_admin) {
@@ -94,7 +94,7 @@ class admin extends CI_Controller {
     public function mostrarEditar($id) {
         $this->load->model('admin_model');
         $data['query'] = $this->admin_model->buscaId($id);
-        $this->load->view('v_editarAdmin', $data);
+        $this->load->view('admin/v_editarAdmin', $data);
     }
     
     public function editar($id_palavra){

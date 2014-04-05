@@ -24,8 +24,8 @@
                             <td><?php echo $admin->id; ?></td>
                             <td><?php echo $admin->usuario; ?></td>
                             <td><?php echo $admin->senha; ?></td>
-                            <td><a href='<?php echo base_url(); ?>admin/mostrarEditar/<?php echo $admin->id; ?>'>Editar</a></td>
-                            <td><a href='<?php echo base_url(); ?>admin/deletar/<?php echo $admin->id; ?>'>Deletar</a></td>
+                            <td><a href='<?php echo base_url(); ?>index.php/admin/mostrarEditar/<?php echo $admin->id; ?>'>Editar</a></td>
+                            <td><a href='<?php echo base_url(); ?>index.php/admin/deletar/<?php echo $admin->id; ?>'>Deletar</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

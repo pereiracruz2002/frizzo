@@ -7,23 +7,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo base_url(); ?>painel">Megasenha</a>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>index.php/painel">Frizzo</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url(); ?>palavras/cadastrar">Cadastrar palavras</a></li>
-                <li><a href="<?php echo base_url(); ?>palavras/listarPalavras">Listar Palavras</a></li>
-                <li><a href="<?php echo base_url(); ?>jogadores/listarJogadores">Listar Jogadores</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/palavras/cadastrar">Cadastrar Imagens</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/palavras/listarPalavras">Listar Imagens</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/jogadores/listarJogadores">Listar Imagens</a></li>
                 <?php 
                     $dados = $this->session->userdata('admin');
                     if($dados['permissao'] == 1):
                 ?>
-                    <li><a href="<?php echo base_url(); ?>admin/cadastrar">Cadastrar Administrador</a></li>
-                    <li><a href="<?php echo base_url(); ?>admin/listar">Listar Administradores</a></li>
-                    <li><a href="<?php echo base_url(); ?>paginas/listar">Editar Páginas</a></li>
-                    <li><a href="<?php echo base_url(); ?>configuracoes/listarConfiguracoes">Editar Configurações</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/admin/cadastrar">Cadastrar Administrador</a></li>
+                    <li><a href="<?php echo base_url(); ?>index.php/admin/listar">Listar Administradores</a></li>
                 <?php endif; ?>
-                <li><a href="<?php echo base_url(); ?>admin/sair">Sair</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/admin/sair">Sair</a></li>
 
             </ul>
         </div>
