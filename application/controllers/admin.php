@@ -24,11 +24,8 @@ class admin extends CI_Controller {
             }
         }
         
-<<<<<<< HEAD
         $this->load->view('admin/v_admin', $this->data);
-=======
-        $this->load->view('v_admin', $this->data);
->>>>>>> 964d328cf24fb307465751713576fd4d97e00799
+
     }
     
     public function sair (){

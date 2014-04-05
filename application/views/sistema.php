@@ -1,6 +1,6 @@
 <?php include_once(dirname(__FILE__).'/html_header.php'); ?>
 <div class="container">
-	<div class="row" style="margin-top: 10px;">
+	<div class="row" style="margin-top: 20px;">
 		
 		<div class="col-md-12">
 			<div class="panel panel-default">
@@ -12,29 +12,32 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="text-center text_maisculo yellow">Senha</h3>
+			<div class="panel panel-default">
+	  			<div class="panel-heading">
+	  				<h3 class="text-center text_maisculo yellow">Senha</h3></div>
+		  			<div class="panel-body">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-2 col-md-offset-5">
+									<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
+										<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
+									</form>
+								</div>
+								</div>
+								<div class="col-md-offset-5"></div>
+							</div>
+						</div>
+		  			</div>
+		  		</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-2 col-md-offset-5">
-					<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
-						<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
-					</form>
-				</div>
-				</div>
-				<div class="col-md-offset-5"></div>
-			</div>
-		</div>
-  
-	</div>
+
 	
 	<div class="row">
 		<div class="col-md-12" style="margin-top: 10px;">
 			<div class="col-md-6">
 				<div class="panel panel-default">
-	  			       <div class="panel-heading turquesa"><h4 class="text-center text_maisculo yellow">Últimas Senhas</h4></div>
+	  			       <div class="panel-heading"><h4 class="text-center text_maisculo yellow">Últimas Senhas</h4></div>
 				         <div class="panel-body">
 				    	     <ul class="list-unstyled" id="senha">
 				    	     	<li>*****</li>
