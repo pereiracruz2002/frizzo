@@ -11,9 +11,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url(); ?>index.php/palavras/cadastrar">Cadastrar Imagens</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/palavras/listarPalavras">Listar Imagens</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/jogadores/listarJogadores">Listar Imagens</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/promocao/cadastrar">Cadastrar Promoções</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/promocao/listar">Listar Promoções</a></li>
                 <?php 
                     $dados = $this->session->userdata('admin');
                     if($dados['permissao'] == 1):
