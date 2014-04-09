@@ -40,7 +40,7 @@
           $('#senha').append( "<li></li>" );
         }else if(total_senhas > 5){
           $('#senha li').eq(4).empty();
-          $('#senha li').eq(0).append( "<li>"+senha+"</li>" );
+          $('#senha').eq(0).append( "<li>"+senha+"</li>" );
         }else{
            $( "<li>"+senha+"</li>" ).insertBefore($('#senha li').eq(0));
         }

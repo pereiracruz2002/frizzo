@@ -6,6 +6,9 @@
 			<div class="panel panel-default">
 				 <div class="panel-body">
 					<h1 class="text-center text_maisculo marron">Peixaria Frizzo</h1>
+					<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
+										<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
+									</form>
 				</div>
 			</div>
 		</div>
@@ -20,9 +23,7 @@
 							<div class="row">
 								<div class="col-md-3 col-md-offset-4">
 									<p id="senha_atual" class="text-center destaque marron">*****</p>
-									<form action="" method="post" accept-charset="utf-8" class="form" name="myform">
-										<input class="col-md-2 form-control senha" type="text" name="senha" placeholder="">
-									</form>
+									
 								</div>
 								</div>
 								<div class="col-md-offset-5"></div>
