@@ -19,17 +19,19 @@ class promocao extends CI_Controller {
     
     public function cadastrar(){
         
-        if($this->input->posts()){
+        if($this->input->post()){
             $this->load->model('promocao_model');
             $this->load->model('admin_model');
         
             if($this->admin_model->verificaPermissao()){
                 
               
-                    $savePromocao = $this->input->posts();
+                    $savePromocao = $this->input->post();
                 
                 #Cadastrando!
                 if ($this->promocao_model->cadastrar($savePromocao)){
+                    $banner_id = $this->promocao_model->cadastrar($savePromocao);
+                    $this->uploadImagem($banner_id);
                     $this->data['mensagem'] = "Promoção cadastrado com sucesso!";
                     $this->load->view('v_cadastrarPromocao', $this->data);
                 } else {
@@ -114,12 +116,11 @@ class promocao extends CI_Controller {
         $config['max_width']  = '263';
         $config['max_height']  = '191';
         $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('arquivo')){
+        if (!$this->upload->do_upload('imagem')){
             return false;
         }else{
             $this->upload_data = $this->upload->data();
             $this->data['item']['imagem_id'] = $this->imagem->save($dados);
-            $this->data['item']['src_thumb_151'] = $dados['src_thumb_151'];
             return $this->data['item']['imagem_id'];
         }
     }

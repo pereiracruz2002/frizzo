@@ -15,7 +15,7 @@
 
     <article>
 
-        <form method="post" action="<?php echo base_url(); ?>index.php/admin/cadastrar" class="form-horizontal" role="form">
+        <form method="post" action="<?php echo base_url(); ?>index.php/promocao/cadastrar" class="form-horizontal" role="form">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nome:</label>
                 <div class="col-sm-10">
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Senha:</label>
+                <label class="col-sm-2 control-label">Preço:</label>
                 <div class="col-sm-10">
                     <input type="text" name="src" class="form-control" required>
                 </div>
@@ -38,9 +38,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
+                <label class="col-sm-2 control-label" for="exampleInputFile">Imagem</label>
+                <input type="file" name="imagem" id="exampleInputFile">
             </div>
             
             <div class="form-group">
