@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (11,'admin','T5cpOJHFjYUYeLA7rho7jKXVbgE3X10hGozuo3CroBaMeRaaf2krQICwwd+V7RXMMz1mPfSIzZ29A9tFsRhDYw==',1),(12,'flavio','F/M7WGEEKgKL3xCL0vMLkRJHlQAcBpiD4h12Guy5C78WR5j/Eoy1iFqt8a9R67KCzNnTlHxMUlmpG6yIGEC0WQ==',1),(15,'adminfrizzo','u+9xcr7acLnJPNpHn7DmbprKEMmT6Dzq0qMyWOKds0l5cbjOixFo67IzOvbZPLbsRu8f3GJ+LWGKqa0GndHRIg==',1);
+INSERT INTO `admin` VALUES (11,'admin','admin',1),(12,'flavio','flavio123',1),(15,'adminfrizzo','adminfrizzo',1);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-12 12:09:52
+-- Dump completed on 2014-04-12 18:23:44

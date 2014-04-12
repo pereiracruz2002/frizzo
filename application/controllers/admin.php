@@ -50,7 +50,7 @@ class admin extends CI_Controller {
                 $this->load->library('encrypt');
                 $dados = array(
                     'usuario' => $this->input->post('usuario'),
-                    'senha' => $this->encrypt->encode($this->input->post('senha')),
+                    'senha' => $this->input->post('senha'),
                     'permissao' => $permissao
                 );
                 
@@ -100,12 +100,12 @@ class admin extends CI_Controller {
     
     public function editar($id_palavra){
         $this->load->model('admin_model');
-        $this->load->library('encrypt');
+        //$this->load->library('encrypt');
          if($_POST){
             
             $dados = array(    
                 'usuario' => $this->input->post('usuario'),
-                'senha' => $this->encrypt->encode($this->input->post('senha')),
+                'senha' => $this->input->post('senha'),
                 'permissao' => $this->input->post('permissao')
             );
             
