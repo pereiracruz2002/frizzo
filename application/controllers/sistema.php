@@ -14,6 +14,9 @@ class Sistema extends CI_Controller {
 		}else{
 			$data['senha'] = "****";
 		}
+
+		$this->load->model('promocao_model');
+		$data['promocao'] = $this->promocao_model->listar()->result();
 		$this->load->view('sistema',$data);
 	}
 }

@@ -10,12 +10,11 @@ class promocao_model extends CI_Model {
     
     public function cadastrar($dados){       
         
-        if($query->num_rows()){
-            return false;
+        if($this->db->insert('promocao', $dados)){
+            return true;
         }
         else {
-            $this->db->insert('promocao', $dados); 
-            return true;
+            return false;
         }
     }
     

@@ -15,7 +15,10 @@
 
     <article>
 
-        <form method="post" action="<?php echo base_url(); ?>index.php/promocao/cadastrar" class="form-horizontal" role="form">
+        <!--<form method="post" action="<?php echo base_url(); ?>index.php/promocao/cadastrar" class="form-horizontal" role="form">-->
+        <?php
+        $attributes = array('class' => 'form-horizontal', 'id' => 'myform');
+        echo form_open_multipart('promocao/cadastrar', $attributes);?>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nome:</label>
                 <div class="col-sm-10">
@@ -25,13 +28,13 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Preço:</label>
                 <div class="col-sm-10">
-                    <input type="text" name="src" class="form-control" required>
+                    <input type="text" name="link" class="form-control" required>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Ativo</label>
                 <div class="col-sm-10">
-                    <select name="permissao" class="form-control">
+                    <select name="ativo" class="form-control">
                         <option value="1" name="sim" >Sim</option>
                         <option value="0" name="nao" >Não</option>
                     </select>

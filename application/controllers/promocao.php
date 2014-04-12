@@ -19,29 +19,32 @@ class promocao extends CI_Controller {
     
     public function cadastrar(){
         
-        if($this->input->post()){
+        if($_POST){
             $this->load->model('promocao_model');
             $this->load->model('admin_model');
         
             if($this->admin_model->verificaPermissao()){
-                
-              
-                    $savePromocao = $this->input->post();
+                    
+                    $dados = array(
+                    'nome' => $this->input->post('nome'),
+                    'link' => $this->input->post('link'),
+                    'ativo' => $this->input->post('ativo')
+                );
+                    $id = $this->promocao_model->cadastrar($dados);
                 
                 #Cadastrando!
-                if ($this->promocao_model->cadastrar($savePromocao)){
-                    $banner_id = $this->promocao_model->cadastrar($savePromocao);
-                    $this->uploadImagem($banner_id);
+                if ($id){
+                    $this->uploadImagem($id);
                     $this->data['mensagem'] = "Promoção cadastrado com sucesso!";
-                    $this->load->view('v_cadastrarPromocao', $this->data);
+                    $this->load->view('admin/v_cadastrarPromocao', $this->data);
                 } else {
-                    $this->data['erro'] = "Administrador com este nome de usuário, já cadastrado!";
-                    $this->load->view('admin/v_cadastrarAdmin', $this->data);
+                    $this->data['erro'] = "Falha ao cadastrar esta promoção!";
+                    $this->load->view('admin/v_cadastrarPromocao', $this->data);
                 }
             }
             else{
                 $this->data['erro'] = "Você não possui permissões administrativas";
-                $this->load->view('admin/v_cadastrarAdmin', $this->data);
+                $this->load->view('admin/v_cadastrarPromocao', $this->data);
             }
         }
         else{
@@ -97,31 +100,36 @@ class promocao extends CI_Controller {
     public function uploadImagem($promocao_id) 
     {
         $this->load->model('promocao_model','promocao');
-        $save['promocao_id'] = $this->uploads();
-        if($save['promocao_id']){
-          $save['promocao_id'] = $promocao_id;
-          $this->data['imagem_produto_id'] = $this->produto->novaImagem($save);
+        $name = $this->uploads();
+        if($name){
+            $data = array(
+               'src' => $name["file_name"]
+            );
+        $this->db->where('banner_id', $promocao_id);
+        $this->db->update('promocao', $data); 
         }
         
-        $this->load->view('produtos/upload_imagens', $this->data);
+        //$this->load->view('produtos/upload_imagens', $this->data);
     }
 
     public function uploads()
     {
         $this->load->model('promocao_model', 'promocao');
 
-        $config['upload_path'] = base_url().'../uploads/';
+        $config['upload_path'] = 'uploads/';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '100000';
-        $config['max_width']  = '263';
-        $config['max_height']  = '191';
+        //$config['max_size'] = '100000';
+        //$config['max_width']  = '800';
+        //$config['max_height']  = '600';
+        $data['upload_data'] = '';
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('imagem')){
+             $data = array('msg' => $this->upload->display_errors());
+             //var_dump($data);
+            //exit();
             return false;
         }else{
-            $this->upload_data = $this->upload->data();
-            $this->data['item']['imagem_id'] = $this->imagem->save($dados);
-            return $this->data['item']['imagem_id'];
+            return $data['upload_data'] = $this->upload->data();
         }
     }
     
