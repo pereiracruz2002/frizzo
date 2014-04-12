@@ -15,8 +15,8 @@ class admin_model extends CI_Model {
              //echo "SENHA".$this->encrypt->encode($senha);
             //exit();
             $dados_usuario = $query->row();
-            //echo $this->encrypt->decode($dados_usuario->senha);
-            //exit();
+            echo $this->encrypt->decode($dados_usuario->senha);
+            exit();
             if($this->encrypt->decode($dados_usuario->senha) == $senha){
                 $this->set_session_data($dados_usuario);
                 return true;   
