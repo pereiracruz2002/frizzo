@@ -1,5 +1,5 @@
 <?php include_once(dirname(__FILE__).'/v_header.php'); ?>
-        <p><a href="<?php echo base_url(); ?>painel" class="btn btn-default">Voltar</a></p>
+        <p><a href="<?php echo base_url(); ?>index.php/painel" class="btn btn-default">Voltar</a></p>
         <main>    
             <!-- Mensagem de sucesso -->
             <?php if(isset($mensagem)): ?>
@@ -24,8 +24,8 @@
                             <td><?php echo $promocao->nome; ?></td>
                             <td><?php echo $promocao->link; ?></td>
                             <td><?php echo $promocao->ativo; ?></td>
-                            <td><a href='<?php echo base_url(); ?>index.php/promocao/mostrarEditar/<?php echo $promocao->promocao_id; ?>'>Editar</a></td>
-                            <td><a href='<?php echo base_url(); ?>index.php/promocao/deletar/<?php echo $promocao->promocao_id; ?>'>Deletar</a></td>
+                            <!--<td><a href='<?php echo base_url(); ?>index.php/promocao/mostrarEditar/<?php echo $promocao->banner_id; ?>'>Editar</a></td>-->
+                            <td><a href='<?php echo base_url(); ?>index.php/promocao/deletar/<?php echo $promocao->banner_id; ?>'>Deletar</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

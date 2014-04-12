@@ -67,7 +67,7 @@
 								<?php //var_dump($promocao);?>
 								<?php $i=0; foreach($promocao as $promo):?>
 									<div class="<?php if($i==0){echo "active ";}?> item"><img class="media-object img-rounded img-responsive" src="<?php echo base_url()?>uploads/<?php echo $promo->src;?>">
-										<div class="carousel-caption"><h3><?php echo 'R$ ' . number_format($promo->link, 2, ',', '.');?></h3></div>
+										<div class="carousel-caption"><h3 class="preco-banner"><?php echo 'R$ ' . number_format($promo->link, 2, ',', '.');?> o kg</h3><p class="titulo-banner"><?php echo $promo->nome;?></p></div>
 									</div>
 									<!--<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Pacu.jpg" width="430px" height="295px"></div>
 									<div class="item"><img class="media-object img-rounded" src="<?php echo base_url()?>uploads/Tilapia.jpg" width="430px" height="295px"></div>-->

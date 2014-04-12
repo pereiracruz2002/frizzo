@@ -23,16 +23,15 @@ class promocao_model extends CI_Model {
         return $query;
     }
     
-    public function deletar($id_admin) {
+    public function deletar($banner_id) {
         
         $id = $this->session->userdata('admin');
         
-        if($id_admin == $id['id']){
-            return false;
-        }
-        else{
-            $this->db->delete('admin', array('id' => $id_admin));
+        if($this->db->delete('promocao', array('banner_id' => $banner_id))){
             return true;
+        }
+        else{           
+            return false;
         }
     }
     

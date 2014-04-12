@@ -30,10 +30,10 @@ class promocao extends CI_Controller {
                     'link' => $this->input->post('link'),
                     'ativo' => $this->input->post('ativo')
                 );
-                    $id = $this->promocao_model->cadastrar($dados);
-                
+
                 #Cadastrando!
-                if ($id){
+                if ($this->promocao_model->cadastrar($dados)){
+                    $id = $this->db->insert_id();
                     $this->uploadImagem($id);
                     $this->data['mensagem'] = "Promoção cadastrado com sucesso!";
                     $this->load->view('admin/v_cadastrarPromocao', $this->data);
@@ -59,15 +59,15 @@ class promocao extends CI_Controller {
         $this->load->view('admin/v_listarPromocao', $this->data);
     }
     
-    public function deletar($id_admin) {
-        $this->load->model('admin_model');
+    public function deletar($promocao_id) {
+        $this->load->model('promocao_model');
         
-        if($this->admin_model->deletar($id_admin)){
-            $this->data['mensagem'] = "Administrador removido com sucesso!";
+        if($this->promocao_model->deletar($promocao_id)){
+            $this->data['mensagem'] = "Promoção removida com sucesso!";
             $this->listar();
         }
         else{
-            $this->data['erro'] = "Você não pode remover o seu cargo  de administrador!";
+            $this->data['erro'] = "Você não pode remover a imagem!";
             $this->listar();
         }
     }

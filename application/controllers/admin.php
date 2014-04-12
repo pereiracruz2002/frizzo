@@ -47,6 +47,7 @@ class admin extends CI_Controller {
                     $permissao = 0;
                 
                 #Gravando as informações do Administrador
+                $this->load->library('encrypt');
                 $dados = array(
                     'usuario' => $this->input->post('usuario'),
                     'senha' => $this->encrypt->encode($this->input->post('senha')),
@@ -56,7 +57,7 @@ class admin extends CI_Controller {
                 #Cadastrando!
                 if ($this->admin_model->cadastrar($dados)){
                     $this->data['mensagem'] = "Administrador cadastrado com sucesso!";
-                    $this->load->view('v_cadastrarAdmin', $this->data);
+                    $this->load->view('admin/v_cadastrarAdmin', $this->data);
                 } else {
                     $this->data['erro'] = "Administrador com este nome de usuário, já cadastrado!";
                     $this->load->view('admin/v_cadastrarAdmin', $this->data);
@@ -99,12 +100,12 @@ class admin extends CI_Controller {
     
     public function editar($id_palavra){
         $this->load->model('admin_model');
-        
+        $this->load->library('encrypt');
          if($_POST){
             
             $dados = array(    
                 'usuario' => $this->input->post('usuario'),
-                'senha' => $this->input->post('senha'),
+                'senha' => $this->encrypt->encode($this->input->post('senha')),
                 'permissao' => $this->input->post('permissao')
             );
             

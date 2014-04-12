@@ -9,11 +9,14 @@ class admin_model extends CI_Model {
      public function login ($usuario, $senha){
         $where['usuario'] = $usuario;
         $query = $this->db->get_where('admin', $where);
-        
+       
         if($query->num_rows){
             $this->load->library('encrypt');
+             //echo "SENHA".$this->encrypt->encode($senha);
+            //exit();
             $dados_usuario = $query->row();
-            
+            //echo $this->encrypt->decode($dados_usuario->senha);
+            //exit();
             if($this->encrypt->decode($dados_usuario->senha) == $senha){
                 $this->set_session_data($dados_usuario);
                 return true;   
