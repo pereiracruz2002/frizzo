@@ -125,8 +125,8 @@ class promocao extends CI_Controller {
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('imagem')){
              $data = array('msg' => $this->upload->display_errors());
-             var_dump($data);
-            exit();
+             //var_dump($data);
+            //exit();
             return false;
         }else{
             return $data['upload_data'] = $this->upload->data();

@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://ec2-54-207-54-234.sa-east-1.compute.amazonaws.com/frizzo/';
 
 /*
 |--------------------------------------------------------------------------
